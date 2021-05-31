@@ -1,0 +1,66 @@
+.main {
+	&__banner {
+		// margin-bottom: 4rem;
+		max-width: 1500px;
+		margin-left: auto;
+		margin-right: auto;
+		&__hero {
+			position: relative;
+			.slide-btn {
+				position: absolute;
+		    top: 50%;
+		    width: 40px;
+		    height: 40px;
+		    margin-top: -20px;
+		    z-index: 10;
+		    cursor: pointer;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    background-color: var(--body-bg);
+		    box-shadow: var(--shadow);
+		    color: var(--text-color-dark);
+				z-index: 9;
+				opacity: 0.9;
+				&--next {
+					right: 15px;
+				}
+				&--prev {
+					left: 15px;
+				}
+				&:hover {
+					opacity: 1;
+					svg {
+						fill: var(--theme-color);
+					}
+				}
+			}
+		}
+		&--inner {
+			.main__banner__hero {
+				position: relative;
+				&__img {
+					width: 100%;
+					img {
+						width: 100%;
+						height: 400px;
+						object-fit: cover;
+					}
+				}
+				&__cnt {
+					position: absolute;
+					background: rgba(255,255,255,0.8);
+					padding: 1.5rem 3rem;
+					color: var(--text-color-dark);
+					font-size: 3rem;
+					@extend .v-c-align;
+					max-width: 80%;
+					box-shadow: var(--shadow);
+					h2 {
+						font-size: 3rem;
+					}
+				}
+			}
+		}
+	}
+}

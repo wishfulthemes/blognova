@@ -1,0 +1,49 @@
+.search-modal {
+	&__dialog {
+		width: 100%;
+		max-width: 100%;
+		background: var(--light-bg-color);
+		height: 100vh;
+		overflow: hidden;
+		margin: 0;
+		&__close {
+			position: absolute;
+			top: 30px;
+			right: 3rem;
+			cursor: pointer;
+		}
+		&__bg {
+			background: var(--white);
+			padding: 2rem;
+			@include border-radius(3px);
+			box-shadow: var(--shadow);
+			max-width: 600px;
+			margin: 2rem auto;
+			position: relative;
+			z-index: 99999;
+			&__input {
+				input {
+					background: var(--body-bg);
+			    border: 1px solid var(--border-color);
+			    box-shadow: none;
+			    height: 64px;
+			    width: 100%;
+			    font-size: 1.25rem;
+			    line-height: 1.5;
+			    padding: 0 1rem;
+			    margin-bottom: 1.5rem;
+			    color: var(--text-color-normal);
+				}
+				button {
+					height: 64px;
+					width:64px;
+					border: none;
+					background: var(--border-color);
+					&:hover {
+						color: var(--theme-color);
+					}
+				}
+			}
+		}
+	}
+}
