@@ -103,8 +103,7 @@ if ( ! class_exists( 'Blognova' ) ) {
 			 * Styles.
 			 */
 			wp_enqueue_style( "{$handle}-font", '//fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300&display=swap', array(), $version );
-			wp_enqueue_style( "{$handle}-bootstrap", "{$url}/assets/css/min/bootstrap/bootstrap.css", array(), '4.5.2' );
-			wp_enqueue_style( "{$handle}-main", "{$url}/assets/css/min/custom/style.min.css", array(), $version );
+			wp_enqueue_style( "{$handle}-bootstrap", "{$url}/bootstrap.css", array(), '4.5.2' );
 			wp_enqueue_style( $handle, get_stylesheet_uri(), array(), $version );
 
 			/**
