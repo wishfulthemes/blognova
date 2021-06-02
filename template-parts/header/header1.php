@@ -33,6 +33,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 								'container_class' => 'main-nav',
 								'fallback_cb'     => 'blognova_nav_menu_fallback',
 								'theme_location'  => 'primary-menu',
+								'menu_class'			=> 'top-level-menu',
+								'add_li_class'		=> 'top-menu-item'
 							)
 						);
 						?>
