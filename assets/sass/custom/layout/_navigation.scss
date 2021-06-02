@@ -99,9 +99,15 @@
       }
       a {
         font-size: 16px;
+        color: var(--text-color-dark);
         @media (max-width: 1200px) {
           font-size: 14px;
         }
+      }
+    }
+    .current_page_item {
+      a {
+        color: var(--theme-color);
       }
     }
     .menu-item-has-children {
@@ -140,6 +146,9 @@
           @media (max-width: 1200px) {
             top: -1px;
             right: -17px;
+          }
+          &:hover svg {
+            fill: var(--theme-color);
           }
         }
         &.submenu-icon-mobile {
