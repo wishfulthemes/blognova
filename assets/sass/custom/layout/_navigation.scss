@@ -8,6 +8,9 @@
     justify-content: flex-end;
   }
 }
+button.menu-toggle {
+  display: none;
+}
 .main-nav {
   ul {
     @extend .flex;
@@ -119,7 +122,7 @@
       .sub-menu {
         position: absolute;
         display: none;
-        width: 230px;
+        min-width: 230px;
         padding: 20px;
         z-index: 99;
         background: #fff;
@@ -128,6 +131,9 @@
         .menu-item {
           &:not(:last-child) {
             margin-bottom: 20px;
+          }
+          a {
+            white-space: nowrap;
           }
         }
       }

@@ -12288,6 +12288,10 @@ input:focus {
           justify-content: flex-end;
 }
 
+button.menu-toggle {
+  display: none;
+}
+
 .main-nav ul {
   margin-bottom: 0;
 }
@@ -12409,7 +12413,7 @@ input:focus {
 .site-header .main-nav .menu-item-has-children .sub-menu {
   position: absolute;
   display: none;
-  width: 230px;
+  min-width: 230px;
   padding: 20px;
   z-index: 99;
   background: #fff;
@@ -12419,6 +12423,10 @@ input:focus {
 
 .site-header .main-nav .menu-item-has-children .sub-menu .menu-item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.site-header .main-nav .menu-item-has-children .sub-menu .menu-item a {
+  white-space: nowrap;
 }
 
 .site-header .main-nav .menu-item-has-children .sub-menu.show {
@@ -13556,12 +13564,9 @@ input {
   background: var(--body-bg);
 }
 
-*:focus-visible {
-  border: 2px dotted var(--theme-color) !important;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-  background-color: var(--text-color-normal) !important;
-  outline: none;
+*:focus, *:focus-visible {
+  border: 2px solid var(--theme-color);
+  outline: 2px solid var(--theme-color);
 }
 
 /* Large devices (desktops, 992px and up)*/

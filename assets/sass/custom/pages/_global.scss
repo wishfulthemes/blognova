@@ -524,6 +524,7 @@
 }
 
 * {
+  &:focus,
   &:focus-visible {
     @include focusState();
   }
