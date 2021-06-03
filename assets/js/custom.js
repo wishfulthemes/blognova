@@ -34,7 +34,7 @@
     var menuItem = $(this).parent().siblings(".menu-item")
     menuItem.children(".sub-menu").removeClass("show")
   })
-
+                  
   $(document).keyup(function (e) {
     if (e.key === "Escape") {
       // escape key maps to keycode `27`
