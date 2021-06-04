@@ -34,7 +34,18 @@
     var menuItem = $(this).parent().siblings(".menu-item")
     menuItem.children(".sub-menu").removeClass("show")
   })
-                  
+
+  //show searchbar on focus
+  $(".link-item--search a").on("focusin", function () {
+    console.log("focus on search icon")
+    $(".link-item--search form").addClass("show")
+    $(".search-input").addClass("show")
+  })
+  //hide searchbar on focus out
+  $(".search-input").on("focusout", function () {
+    $(this).removeClass("show")
+    $(".link-item--search form").removeClass("show")
+  })
   $(document).keyup(function (e) {
     if (e.key === "Escape") {
       // escape key maps to keycode `27`

@@ -12162,16 +12162,13 @@ input:focus {
 }
 
 .site-header__wrap__left a:focus img, .site-header__wrap__left a:focus-visible img {
-  border: 2px dotted var(--theme-color) !important;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-  background-color: var(--text-color-normal) !important;
-  outline: none;
+  border: 2px solid var(--theme-color);
 }
 
 .site-header__wrap__left a img {
   width: 100%;
   height: auto;
+  max-height: 100px;
 }
 
 .site-header__wrap__left .site-logo {
@@ -12256,9 +12253,14 @@ input:focus {
   text-decoration: none;
 }
 
+.link-item--search {
+  position: relative;
+}
+
 .link-item--search a {
   width: 20px;
   display: inline-block;
+  width: 20px;
 }
 
 .link-item--search a svg {
@@ -12267,6 +12269,41 @@ input:focus {
 
 .link-item--search a:hover svg {
   fill: var(--theme-color);
+}
+
+.link-item--search form {
+  position: absolute;
+  top: 33px;
+  right: calc(100% - 24px);
+  visibility: hidden;
+}
+
+.link-item--search form .search-input {
+  width: 0;
+  height: 0;
+  font-size: 16px;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  border: none;
+  border-bottom: 1px solid var(--theme-color);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.link-item--search form .search-input:focus {
+  border-top: 1px solid var(--theme-color);
+  border-left: 1px solid var(--theme-color);
+  border-right: 1px solid var(--theme-color);
+}
+
+.link-item--search form .search-input.show {
+  width: 280px;
+  height: 30px;
+  padding: 20px 30px;
+}
+
+.link-item--search form.show {
+  visibility: visible !important;
 }
 
 .link-item--bg {

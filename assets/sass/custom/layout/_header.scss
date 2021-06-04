@@ -15,15 +15,13 @@
         &:focus,
         &:focus-visible {
           img {
-            border: 2px dotted var(--theme-color) !important;
-            box-shadow: none !important;
-            background-color: var(--text-color-normal) !important;
-            outline: none;
+            @include focusState();
           }
         }
         img {
           width: 100%;
           height: auto;
+          max-height: 100px;
         }
       }
       .site-logo {
@@ -93,9 +91,11 @@
     }
   }
   &--search {
+    position: relative;
     a {
       width: 20px;
       display: inline-block;
+      width: 20px;
       svg {
         fill: var(--text-color-normal);
       }
@@ -104,6 +104,34 @@
           fill: var(--theme-color);
         }
       }
+    }
+    form {
+      position: absolute;
+      top: 33px;
+      right: calc(100% - 24px);
+      visibility: hidden;
+      .search-input {
+        width: 0;
+        height: 0;
+        font-size: 16px;
+        transition: width 0.3s ease;
+        border: none;
+        border-bottom: 1px solid var(--theme-color);
+        transition: all 0.3s ease;
+        &:focus {
+          border-top: 1px solid var(--theme-color);
+          border-left: 1px solid var(--theme-color);
+          border-right: 1px solid var(--theme-color);
+        }
+      }
+      .search-input.show {
+        width: 280px;
+        height: 30px;
+        padding: 20px 30px;
+      }
+    }
+    form.show {
+      visibility: visible !important;s
     }
   }
   &--bg {
