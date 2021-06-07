@@ -79,7 +79,19 @@
     z-index: 999;
   }
 }
-
+.link-item.link-item--login {
+  @media (max-width: 992px) {
+    margin-right: 16px;
+  }
+}
+.link-item.link-item--subscribe {
+  @media (max-width: 992px) {
+    margin-right: 85px;
+  }
+  @media (max-width: 767px) {
+    margin-right: 55px;
+  }
+}
 .link-item {
   margin-left: 1rem;
   a[class*="btn"] {
@@ -111,7 +123,10 @@
   &--search {
     position: relative;
     @media (max-width: 992px) {
-      right: 56px;
+      right: 65px;
+    }
+    @media (max-width: 767px) {
+      right: 43px;
     }
     a {
       width: 20px;

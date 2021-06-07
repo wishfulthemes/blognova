@@ -12244,6 +12244,24 @@ input:focus {
   z-index: 999;
 }
 
+@media (max-width: 992px) {
+  .link-item.link-item--login {
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .link-item.link-item--subscribe {
+    margin-right: 85px;
+  }
+}
+
+@media (max-width: 767px) {
+  .link-item.link-item--subscribe {
+    margin-right: 55px;
+  }
+}
+
 .link-item {
   margin-left: 1rem;
 }
@@ -12286,7 +12304,13 @@ input:focus {
 
 @media (max-width: 992px) {
   .link-item--search {
-    right: 56px;
+    right: 65px;
+  }
+}
+
+@media (max-width: 767px) {
+  .link-item--search {
+    right: 43px;
   }
 }
 
@@ -13263,17 +13287,11 @@ input {
 
 .main .post--large {
   position: relative;
-  height: calc(100vh - 1336px);
+  height: calc(100vh - 260px);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-}
-
-@media (max-width: 992px) {
-  .main .post--large {
-    height: calc(100vh - 296px);
-  }
 }
 
 .main .post--large .post__img {
@@ -13286,9 +13304,9 @@ input {
 .main .post--large .post__cnt-box {
   width: 60%;
   margin-left: 40%;
-  top: 0;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .main .post--layout3 .post__img {
@@ -13723,6 +13741,35 @@ input {
 
 *:focus, *:focus-visible {
   border: 2px solid var(--theme-color);
+}
+
+@media (max-width: 992px) {
+  section.main__banner .post__img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  section.main__banner .post__cnt-box {
+    position: absolute;
+    margin-left: 0 !important;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) !important;
+            transform: translate(-50%, -50%) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  section.main__banner .post__cnt-box {
+    width: 70% !important;
+  }
+}
+
+@media (max-width: 576) {
+  section.main__banner .post__cnt-box {
+    width: 80% !important;
+  }
 }
 
 /* Large devices (desktops, 992px and up)*/
