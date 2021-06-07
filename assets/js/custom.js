@@ -38,19 +38,17 @@
   //show searchbar on focus
   $(".link-item--search a").on("focusin", function () {
     console.log("focus on search icon")
-    $(".link-item--search form").addClass("show")
-    $(".search-input").addClass("show")
+    $(".link-item--search .search-overlay").addClass("show")
   })
   //hide searchbar on focus out
   $(".search-input").on("focusout", function () {
-    $(this).removeClass("show")
-    $(".link-item--search form").removeClass("show")
+    $(".search-overlay").removeClass("show")
   })
   $(document).keyup(function (e) {
     if (e.key === "Escape") {
       // escape key maps to keycode `27`
       // <DO YOUR WORK HERE>
-
+      $(".search-overlay").removeClass("show")
       console.log("esc key pressed")
       if ($(".menu-item-has-children .sub-menu .menu-item-has-children .sub-menu").hasClass("show")) {
         $(".menu-item-has-children .sub-menu .menu-item-has-children .sub-menu").removeClass("show")
