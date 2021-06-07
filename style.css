@@ -12304,38 +12304,41 @@ input:focus {
   fill: var(--theme-color);
 }
 
-.link-item--search form {
-  position: absolute;
-  top: 33px;
-  right: calc(100% - 24px);
+.link-item--search .search-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  z-index: 17;
   visibility: hidden;
-}
-
-.link-item--search form .search-input {
-  width: 0;
-  height: 0;
-  font-size: 16px;
-  -webkit-transition: width 0.3s ease;
-  transition: width 0.3s ease;
-  border: none;
-  border-bottom: 1px solid var(--theme-color);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-.link-item--search form .search-input:focus {
-  border-top: 1px solid var(--theme-color);
-  border-left: 1px solid var(--theme-color);
-  border-right: 1px solid var(--theme-color);
+.link-item--search .search-overlay form {
+  position: absolute;
+  top: 115px;
+  right: calc((100% - 1140px) / 2);
 }
 
-.link-item--search form .search-input.show {
-  width: 280px;
-  height: 30px;
-  padding: 20px 30px;
+.link-item--search .search-overlay form .search-input {
+  font-size: 16px;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  border: none;
+  border: 1px solid var(--theme-color);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 400px;
+  max-width: 100%;
+  height: 54px;
+  padding: 10px;
 }
 
-.link-item--search form.show {
+.link-item--search .search-overlay.show {
   visibility: visible !important;
 }
 
@@ -12430,10 +12433,6 @@ button.menu-toggle {
   margin-bottom: 0;
 }
 
-.main-nav ul li {
-  margin: 0 1.2rem 0 0;
-}
-
 .main-nav ul li a {
   color: var(--text-color-normal);
   display: block;
@@ -12525,7 +12524,7 @@ button.menu-toggle {
 }
 
 .site-header .main-nav .menu-item a {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--text-color-dark);
 }
 
@@ -12612,7 +12611,6 @@ button.menu-toggle {
 
 .site-header .main-nav .menu-item-has-children .submenu-icon.submenu-icon-mobile {
   display: none;
-  border: 1px solid green;
 }
 
 .sidebar__box {
@@ -13265,12 +13263,17 @@ input {
 
 .main .post--large {
   position: relative;
-  height: calc(100vh - 156px);
+  height: calc(100vh - 1336px);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  min-height: 400px;
+}
+
+@media (max-width: 992px) {
+  .main .post--large {
+    height: calc(100vh - 296px);
+  }
 }
 
 .main .post--large .post__img {

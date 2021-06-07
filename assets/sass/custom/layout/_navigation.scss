@@ -19,7 +19,6 @@ button.menu-toggle {
     @extend .flex;
     margin-bottom: 0;
     li {
-      margin: 0 1.2rem 0 0;
       a {
         color: var(--text-color-normal);
         display: block;
@@ -110,7 +109,7 @@ button.menu-toggle {
         }
       }
       a {
-        font-size: 16px;
+        font-size: 14px;
         color: var(--text-color-dark);
         @media (max-width: 1200px) {
           font-size: 14px;
@@ -176,7 +175,6 @@ button.menu-toggle {
         }
         &.submenu-icon-mobile {
           display: none;
-          border: 1px solid green;
         }
       }
     }
