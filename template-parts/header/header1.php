@@ -23,8 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					<div class="site-header__wrap__right flex">
 
-						<button title="<?php esc_attr_e( 'Menu toggle button', 'blognova' ); ?>" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">&times;</button>
-
+						<button title="<?php esc_attr_e( 'Menu toggle button', 'blognova' ); ?>" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span></span> <span></span> <span></span></button>
 						<nav id="site-navigation" class="main-nav">
 							<?php
 							wp_nav_menu(

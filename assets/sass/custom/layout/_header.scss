@@ -125,9 +125,6 @@
     @media (max-width: 992px) {
       right: 65px;
     }
-    @media (max-width: 767px) {
-      right: 43px;
-    }
     a {
       width: 20px;
       display: inline-block;
@@ -154,8 +151,11 @@
       transition: all 0.3s ease;
       form {
         position: absolute;
-        top: 115px;
-        right: calc((100% - 1140px) / 2);
+        top: 85px;
+        right: calc((100% - 1110px) / 2);
+        @media (max-width: 1200px) {
+          right: calc((100% - 960px) / 2);
+        }
         .search-input {
           font-size: 16px;
           transition: width 0.3s ease;

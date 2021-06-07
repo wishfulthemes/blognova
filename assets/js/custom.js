@@ -61,5 +61,7 @@
   //toggle menu
   $(".menu-toggle").on("click", function () {
     $("#site-navigation").toggleClass("show")
+    $("body").toggleClass("menu-opened")
+    $(".menu-toggle").toggleClass("show")
   })
 })(jQuery)
