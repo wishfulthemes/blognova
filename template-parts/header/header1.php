@@ -39,20 +39,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 								)
 							);
 							?>
+							<div class="header__button-container">
+								<?php if ( blognova_theme_mod( 'header_cta_one_label' ) ) { ?>
+									<div class="link-item link-item--login">
+										<a href="<?php echo esc_url( blognova_theme_mod( 'header_cta_one_link' ) ); ?>" class="btn-login"><?php echo esc_html( blognova_theme_mod( 'header_cta_one_label' ) ); ?></a>
+									</div>
+								<?php } ?>
 
-							<?php if ( blognova_theme_mod( 'header_cta_one_label' ) ) { ?>
-								<div class="link-item link-item--login">
-									<a href="<?php echo esc_url( blognova_theme_mod( 'header_cta_one_link' ) ); ?>" class="btn-login"><?php echo esc_html( blognova_theme_mod( 'header_cta_one_label' ) ); ?></a>
-								</div>
-							<?php } ?>
-
-							<?php if ( blognova_theme_mod( 'header_cta_two_label' ) ) { ?>
-								<div class="link-item link-item--subscribe">
-									<a href="<?php echo esc_url( blognova_theme_mod( 'header_cta_two_link' ) ); ?>" class="btn-primary"><?php echo esc_html( blognova_theme_mod( 'header_cta_two_label' ) ); ?></a>
-								</div>
-							<?php } ?>
-
-							<?php if ( blognova_theme_mod( 'enable_header_search' ) ) { ?>
+								<?php if ( blognova_theme_mod( 'header_cta_two_label' ) ) { ?>
+									<div class="link-item link-item--subscribe">
+										<a href="<?php echo esc_url( blognova_theme_mod( 'header_cta_two_link' ) ); ?>" class="btn-primary"><?php echo esc_html( blognova_theme_mod( 'header_cta_two_label' ) ); ?></a>
+									</div>
+								<?php } ?>
+							</div>
+						</nav>
+						<?php if ( blognova_theme_mod( 'enable_header_search' ) ) { ?>
 								<div class="link-item link-item--search">
 									<a href="#">
 										<svg id="i-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -66,8 +67,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 									</div>
 								</div>
 							<?php } ?>
-						</nav>
-
 
 					</div>
 				</div>
