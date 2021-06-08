@@ -12329,7 +12329,7 @@ input:focus {
   top: 0;
   left: 0;
   background: #000;
-  opacity: 0.5;
+  opacity: 0.8;
   z-index: 17;
   visibility: hidden;
   -webkit-transition: all 0.3s ease;
@@ -12338,14 +12338,10 @@ input:focus {
 
 .link-item--search .search-overlay form {
   position: absolute;
-  top: 85px;
-  right: calc((100% - 1110px) / 2);
-}
-
-@media (max-width: 1200px) {
-  .link-item--search .search-overlay form {
-    right: calc((100% - 960px) / 2);
-  }
+  top: 90px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .link-item--search .search-overlay form .search-input {
