@@ -60,6 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 										</svg>
 									</a>
 									<div class="search-overlay">
+										<div class="actual-overlay"></div>
 										<form action="#">
 											<input type="search" id="gsearch" name="gsearch" class = "search-input" autofocus/>
 										</form>

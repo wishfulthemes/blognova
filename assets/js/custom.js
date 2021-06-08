@@ -44,6 +44,9 @@
   $(".search-input").on("focusout", function () {
     $(".search-overlay").removeClass("show")
   })
+  $(".actual-overlay").on("click", function () {
+    $(".search-overlay").removeClass("show")
+  })
   $(document).keyup(function (e) {
     if (e.key === "Escape") {
       // escape key maps to keycode `27`
