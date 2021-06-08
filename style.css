@@ -12155,6 +12155,11 @@ input:focus {
   transition: left var(--transition-speed);
 }
 
+.site-header .site-title,
+.site-header .site-description {
+  position: inherit !important;
+}
+
 .site-header__wrap {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -12199,7 +12204,6 @@ input:focus {
 }
 
 .site-header__wrap__left .site-logo {
-  max-width: 130px;
   display: inline-block;
   color: var(--text-color-normal);
   font-size: 24px;
