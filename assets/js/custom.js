@@ -41,7 +41,8 @@
     $(".link-item--search .search-overlay").addClass("show")
   })
   //hide searchbar on focus out
-  $(".search-input").on("focusout", function () {
+
+  $(".search-button").on("focusout", function () {
     $(".search-overlay").removeClass("show")
   })
   $(".actual-overlay").on("click", function () {

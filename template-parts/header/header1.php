@@ -62,7 +62,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 									<div class="search-overlay">
 										<div class="actual-overlay"></div>
 										<form action="#">
-											<input type="search" id="gsearch" name="gsearch" class = "search-input" autofocus/>
+											<input type="search" id="gsearch" name="gsearch" class = "search-input" placeholder = "Search.." autofocus/>
+											<button type = "submits" class="search-button">search</button>
 										</form>
 									</div>
 								</div>

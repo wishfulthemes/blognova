@@ -12341,12 +12341,13 @@ input:focus {
   height: 100%;
   top: 0;
   left: 0;
-  background: #000;
-  opacity: 0.8;
   z-index: 17;
   visibility: hidden;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  z-index: 99;
 }
 
 .link-item--search .search-overlay .actual-overlay {
@@ -12356,6 +12357,8 @@ input:focus {
   width: 100%;
   height: 100%;
   background: transparent;
+  background: #000;
+  opacity: 0.8;
 }
 
 .link-item--search .search-overlay form {
@@ -12387,8 +12390,29 @@ input:focus {
   }
 }
 
+.link-item--search .search-overlay form .search-button {
+  height: 54px;
+  border: none;
+  margin: 0;
+  outline: none;
+  position: absolute;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  background-color: var(--theme-color);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 0 25px;
+}
+
+.link-item--search .search-overlay form .search-button:hover, .link-item--search .search-overlay form .search-button:focus {
+  background-color: #02638f;
+  padding: 0 28px;
+}
+
 .link-item--search .search-overlay.show {
   visibility: visible !important;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .link-item--bg {
