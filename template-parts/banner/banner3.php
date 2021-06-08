@@ -26,6 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 									<img src="https://picsum.photos/800" alt="">
 								</a>
 								<div class="post__cnt-box">
+									<div class="post-container">
 									<h2 class="post__cnt-box__title">
 										<a href="#">It is during our darkest moments that we must focus to see the light</a>
 									</h2>
@@ -36,6 +37,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 											<a href="#">Lifestyle</a>
 										</div>
 									</div>
+									</div>
+									
 								</div>
 							</article>
 

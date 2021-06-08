@@ -24,6 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 									<img src="https://picsum.photos/1200" alt="">
 								</a>
 								<div class="post__cnt-box">
+									<div class="post-container">
 									<ul class="post__cnt-box__meta flex">
 										<li class="flex">
 											<a href="#" class="post-author">
@@ -83,6 +84,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 											<a href="#">Lifestyle</a>
 										</div>
 									</div>
+									</div>
+								
 								</div>
 							</article>
 						</div>

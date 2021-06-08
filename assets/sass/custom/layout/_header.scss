@@ -31,6 +31,10 @@
       width: 250px;
       @media (max-width: 992px) {
         width: 100px;
+        flex-grow: 1;
+      }
+      @media (max-width: 576px) {
+        max-width: 67%;
       }
       a {
         width: 100%;

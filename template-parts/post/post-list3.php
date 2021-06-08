@@ -17,6 +17,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php blognova_the_post_thumbnail(); ?>
 
 	<div class="post__cnt-box">
+		<div class="post-container ">
+
 		<?php
 		blognova_post_box_meta(
 			blognova_theme_mod( 'hide_posts_listing_post_author' ),
@@ -31,6 +33,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		blognova_post_box_bottom();
 		?>
+		</div>
+		
 	</div>
 
 </article>

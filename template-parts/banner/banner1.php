@@ -51,21 +51,23 @@ $the_query = new WP_Query( $args );
 					<article class="post post--large">
 						<?php blognova_the_post_thumbnail( 'full' ); ?>
 						<div class="post__cnt-box">
+							<div class="post-container">
+								<?php
+								blognova_post_box_meta(
+									blognova_theme_mod( 'hide_banner_slider_post_author' ),
+									blognova_theme_mod( 'hide_banner_slider_read_time' ),
+									blognova_theme_mod( 'hide_banner_slider_post_date' )
+								);
 
-							<?php
-							blognova_post_box_meta(
-								blognova_theme_mod( 'hide_banner_slider_post_author' ),
-								blognova_theme_mod( 'hide_banner_slider_read_time' ),
-								blognova_theme_mod( 'hide_banner_slider_post_date' )
-							);
+								the_title(
+									'<h2 class="post__cnt-box__title"><a href="' . esc_url( get_the_permalink() ) . '">',
+									'</a></h2>'
+								);
 
-							the_title(
-								'<h2 class="post__cnt-box__title"><a href="' . esc_url( get_the_permalink() ) . '">',
-								'</a></h2>'
-							);
-
-							blognova_post_box_bottom( blognova_theme_mod( 'hide_banner_slider_category' ) );
-							?>
+								blognova_post_box_bottom( blognova_theme_mod( 'hide_banner_slider_category' ) );
+								?>
+							</div>
+						
 						</div>
 					</article>
 				</div>
