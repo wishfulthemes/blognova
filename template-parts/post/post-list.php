@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php blognova_the_post_thumbnail(); ?>
 
-	<div class="post__cnt-box post-normal">
+	<div class="post__cnt-box post-normal wow bounceInLeft" data-wow-duration="3s">
 		<div class="post__container">
 			<?php
 			blognova_post_box_meta(

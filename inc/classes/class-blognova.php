@@ -113,6 +113,7 @@ if ( ! class_exists( 'Blognova' ) ) {
 			wp_enqueue_script( "{$handle}-popper", "{$url}/assets/js/popper.js", array(), '1.16.1', true );
 			wp_enqueue_script( "{$handle}-bootstrap", "{$url}/assets/js/bootstrap.js", array(), '4.5.2', true );
 			wp_enqueue_script( "{$handle}-navigation", "{$url}/assets/js/navigation.js", array(), '1.0.0', true );
+			wp_enqueue_script( "{$handle}-wowjs", "{$url}/assets/js/wow.min.js", array(), '1.0.0', true );
 
 			if ( is_singular() ) {
 				wp_enqueue_script( 'comment-reply' );

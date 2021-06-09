@@ -196,6 +196,8 @@
           background-color: var(--theme-color);
           transition: all 0.3s ease;
           padding: 0 25px;
+          color: #fff;
+          font-weight: 500;
           &:hover,
           &:focus {
             background-color: darken($color: #03a9f4, $amount: 20%);

@@ -47,10 +47,10 @@ $the_query = new WP_Query( $args );
 				$active = 0 === $the_query->current_post ? ' active' : null;
 
 				?>
-				<div class="carousel-item <?php echo esc_attr( $active ); ?>">
+				<div class="carousel-item <?php echo esc_attr( $active ); ?> wow fadeInUp">
 					<article class="post post--large">
 						<?php blognova_the_post_thumbnail( 'full' ); ?>
-						<div class="post__cnt-box">
+						<div class="post__cnt-box wow f2">
 							<div class="post-container">
 								<?php
 								blognova_post_box_meta(

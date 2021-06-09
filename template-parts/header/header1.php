@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <!-- #site-header -->
-<header role="site-header" class="site-header site-header--bg">
+<header role="site-header" class="site-header site-header--bg  wow fadeInDown">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">

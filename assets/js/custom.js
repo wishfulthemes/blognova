@@ -1,4 +1,5 @@
 ;(function ($) {
+  new WOW().init()
   //make dropdown icons tabbable
   $(".menu-item-has-children .submenu-icon").attr("tabindex", "0")
   //dristibute a speical class for the top level menu item
