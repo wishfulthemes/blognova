@@ -169,6 +169,8 @@ button.menu-toggle {
         z-index: 99;
         background-color: var(--light-bg-color);
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+        outline: 1px solid var(--theme-color);
+        outline-offset: -5px;
         @media (max-width: 992px) {
           top: 0;
         }

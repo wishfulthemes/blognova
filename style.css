@@ -12699,6 +12699,8 @@ button.menu-toggle {
   background-color: var(--light-bg-color);
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+  outline: 1px solid var(--theme-color);
+  outline-offset: -5px;
 }
 
 @media (max-width: 992px) {
@@ -13214,6 +13216,83 @@ input {
 
 .card-view__ele__cnt .card-info {
   margin-top: 0.55rem;
+}
+
+.sidebar h1,
+.sidebar h2,
+.sidebar h3,
+.sidebar h4,
+.sidebar h5 {
+  display: inline-block;
+}
+
+.sidebar h1:before,
+.sidebar h2:before,
+.sidebar h3:before,
+.sidebar h4:before,
+.sidebar h5:before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: var(--theme-color);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+.sidebar .widget_search .search-form label {
+  width: 100%;
+}
+
+.sidebar .widget_search .search-form input.search-submit {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.sidebar .widget_search .search-form input.search-submit:hover, .sidebar .widget_search .search-form input.search-submit:focus, .sidebar .widget_search .search-form input.search-submit:focus-visible {
+  background-color: var(--theme-color);
+  color: #fff;
+}
+
+.sidebar .widget_recent_enteries h1,
+.sidebar .widget_recent_enteries h2,
+.sidebar .widget_recent_enteries h3,
+.sidebar .widget_recent_enteries h4,
+.sidebar .widget_recent_enteries h5 {
+  display: inline-block;
+}
+
+.sidebar .widget_recent_enteries h1::before,
+.sidebar .widget_recent_enteries h2::before,
+.sidebar .widget_recent_enteries h3::before,
+.sidebar .widget_recent_enteries h4::before,
+.sidebar .widget_recent_enteries h5::before {
+  width: 100%;
+}
+
+.sidebar ul li {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.sidebar ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--text-color-normal);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a:focus, .sidebar ul li a:focus-visible {
+  color: var(--text-color-dark);
+}
+
+.sidebar .widget_calendar table {
+  width: 100%;
 }
 
 .error {

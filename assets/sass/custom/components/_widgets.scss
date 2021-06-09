@@ -1,0 +1,69 @@
+.sidebar {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    display: inline-block;
+    &:before {
+      content: "";
+      width: 100%;
+      height: 3px;
+      background: var(--theme-color);
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+    }
+  }
+  .widget_search {
+    .search-form {
+      label {
+        width: 100%;
+      }
+      input.search-submit {
+        transition: all 0.3s ease;
+        &:hover,
+        &:focus,
+        &:focus-visible {
+          background-color: var(--theme-color);
+          color: #fff;
+        }
+      }
+    }
+  }
+  .widget_recent_enteries {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      display: inline-block;
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+  ul li {
+    font-style: italic;
+    font-weight: 300;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    a {
+      font-style: normal;
+      font-weight: 500;
+      color: var(--text-color-normal);
+      transition: all 0.3s ease;
+      &:hover,
+      &:focus,
+      &:focus-visible {
+        color: var(--text-color-dark);
+      }
+    }
+  }
+  .widget_calendar {
+    table {
+      width: 100%;
+    }
+  }
+}
