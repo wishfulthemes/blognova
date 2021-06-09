@@ -12724,7 +12724,7 @@ button.menu-toggle {
 .site-header .main-nav .menu-item-has-children .submenu-icon,
 .site-header .main-nav .menu-item-has-children .submenu-icon .submenu-icon-mobile {
   position: absolute;
-  top: 2px;
+  top: 0px;
   right: -20px;
   border: none;
   background: transparent;
@@ -12919,6 +12919,19 @@ button.menu-toggle {
 
 .main__banner--inner .main__banner__hero__cnt h2 {
   font-size: 3rem;
+}
+
+@media (max-width: 992px) {
+  .main .post__cnt-box {
+    background: transparent !important;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.5))) !important;
+    background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)) !important;
+  }
+}
+
+.main .post__img {
+  background-image: -webkit-gradient(linear, right bottom, left top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.5))) !important;
+  background-image: linear-gradient(to left top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)) !important;
 }
 
 .site-footer {

@@ -72,4 +72,13 @@
       }
     }
   }
+  .post__cnt-box {
+    @media (max-width: 992px) {
+      background: transparent !important;
+      background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.5)) !important;
+    }
+  }
+  .post__img {
+    background-image: linear-gradient(to left top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)) !important;
+  }
 }
