@@ -163,16 +163,19 @@ button.menu-toggle {
       .sub-menu {
         position: absolute;
         top: 30px;
-        display: none;
+        display: block;
         min-width: 230px;
         padding: 20px;
         z-index: 99;
-        background-color: var(--light-bg-color);
+        background-color: #fff;
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
-        outline: 1px solid var(--theme-color);
-        outline-offset: -5px;
+        transition: transform 0.3s ease, opacity 0.2s ease;
+        visibility: hidden;
+        opacity: 0;
         @media (max-width: 992px) {
-          top: 0;
+          padding-top: 0;
+          transition: transform 0.5s ease, opacity 0.1s ease;
+          margin-top: -20px;
         }
         .menu-item {
           &:not(:last-child) {
@@ -184,8 +187,14 @@ button.menu-toggle {
         }
       }
       .sub-menu.show {
-        display: block;
-        transform: scaleY(1) !important;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        @media (max-width: 992px) {
+          position: inherit !important;
+          opacity: 1;
+          transform: scaleY(1) !important, translateY(0) !important;
+        }
       }
       .submenu-icon {
         &,

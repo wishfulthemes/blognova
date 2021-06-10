@@ -28,7 +28,7 @@ function blognova_site_identity() {     ?>
 
 function blognova_the_post_thumbnail( $size = 'post-thumbnail' ) {
 	?>
-	<a href="<?php the_permalink(); ?>" tabindex="-1" class="post__img loading-bg">
+	<a href="<?php the_permalink(); ?>" tabindex="-1" class="post__img loading-bg wow fadeIn" data-wow-delay = ".2s">
 		<?php the_post_thumbnail( $size ); ?>
 	</a>
 	<?php

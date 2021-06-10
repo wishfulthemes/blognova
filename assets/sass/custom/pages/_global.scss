@@ -608,7 +608,14 @@ input {
 
 .related-post__item {
   width: 100%;
-  display:block;
+  display: block;
   margin-bottom: 2rem;
   padding-right: 1rem;
+}
+
+.btn-primary {
+  &:focus,
+  &:focus-visible {
+    box-shadow: none;
+  }
 }
