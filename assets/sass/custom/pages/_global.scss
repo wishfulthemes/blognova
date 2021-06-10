@@ -595,3 +595,20 @@ section.main__banner {
     }
   }
 }
+.comment-form-comment {
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+textarea,
+input {
+  max-width: 100%;
+}
+
+.related-post__item {
+  width: 100%;
+  display:block;
+  margin-bottom: 2rem;
+  padding-right: 1rem;
+}

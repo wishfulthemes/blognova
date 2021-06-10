@@ -30,19 +30,18 @@ $blognova_related_posts_query = new WP_Query(
 if ( $blognova_related_posts_query->have_posts() ) {
 	?>
 	<div class="container">
-		<div class="row">
-			<dov class="col">
-				<div class="related-post flex">
-
-					<div class="related-post__title">
+			<div class="related-post__title">
 						<h3><?php esc_html_e( 'Related post you might also like', 'blognova' ); ?></h3>
-					</div>
+			</div>
 
+		<div class="row">
+				
 					<?php
 					while ( $blognova_related_posts_query->have_posts() ) {
 						$blognova_related_posts_query->the_post();
 						$blognova_related_posts_cats = get_categories();
 						?>
+						<div class="col-md-4">
 						<div class="related-post__item">
 							<article class="related-post__item__cnt">
 								<a class="overlay-link" href="<?php the_permalink(); ?>"></a>
@@ -78,12 +77,14 @@ if ( $blognova_related_posts_query->have_posts() ) {
 								<div class="related-post__item__cnt__time"><?php blognova_estimated_post_reading_time(); ?></div>
 							</article>
 						</div>
+						</div>
+						
 						<?php
 					}
 					?>
 
-				</div>
-			</dov>
+				
+			
 		</div>
 	</div>
 	<?php

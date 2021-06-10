@@ -1,21 +1,19 @@
-<section class="main__subscribe">
+<section class="main__subscribe main__subscribe__inner">
 		<div class="container">
 			<div class="row">
-				<div class="col">
-					<div class="main__subscribe__inner flex">
+				<div class="col-md-6">
 						<div class="main__subscribe__inner__left">
 							<h2>Subscribe</h2>
 							<p>Get new posts directly to your inbox</p>
 						</div>
-						<div class="main__subscribe__inner__right">
+				</div>
+				<div class="col-md-6">
 							<form action="" class="subscribe-form">
-								<duv class="subscribe-form__field flex">
+								<div class="subscribe-form__field flex">
 									<input type="text" placeholder="Your email address">
 									<button class="btn btn--sub" type="submit">Subscribe</button>
-								</duv>
+								</div>
 							</form>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
