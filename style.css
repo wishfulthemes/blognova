@@ -12242,11 +12242,6 @@ input:focus {
   padding: 0.5rem 0;
 }
 
-[data-nav="sticky"] .site-header--small .site-header__wrap .site-logo {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-}
-
 [data-nav="sticky"] .site-header {
   width: 100%;
   background-color: var(--body-bg);
