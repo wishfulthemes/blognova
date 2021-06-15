@@ -19,9 +19,8 @@ if ( is_home() && 'no-sidebar' === blognova_theme_mod( 'posts_listing_sidebar_la
 }
 
 ?>
-<div class="col-md-4">
+<div class="sidebar-container">
 	<aside class="sidebar">
-		<h1>Required some styling for default WP widgets</h1>
 		<?php dynamic_sidebar( 'blognova-sidebar' ); ?>
 	</aside>
 </div>

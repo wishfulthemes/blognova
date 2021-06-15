@@ -19,9 +19,9 @@ get_header();
 	if ( have_posts() ) {
 		?>
 		<section class="main__cnt"  id="content">
-			<div class="container">
-				<div class="row">
-					<div class="col">
+			<div class="container archive-content-wrapper">
+				
+					<div class="content-container">
 						<?php
 						while ( have_posts() ) {
 							the_post();
@@ -30,7 +30,7 @@ get_header();
 						?>
 					</div>
 					<?php get_sidebar(); ?>
-				</div>
+				
 			</div>
 		</section>
 		<?php
