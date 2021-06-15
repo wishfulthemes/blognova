@@ -31,7 +31,6 @@ get_header();
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<h1>Required minor design fixes</h1>
 						<?php
 						get_template_part( 'template-parts/single/single1' );
 

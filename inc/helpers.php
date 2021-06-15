@@ -114,6 +114,27 @@ function blognova_get_social_links() {
 	);
 }
 
+function blognova_has_footer_widgets() {
+
+	$show = false;
+
+	$enable_footer_widgets = blognova_theme_mod( 'enable_footer_widgets' );
+
+	if ( ! $enable_footer_widgets ) {
+		return $show;
+	}
+
+	for ( $i = 0; $i < 5; $i++ ) {
+		$index = $i ? "blognova-footer-widget-{$i}" : 'blognova-footer-widget';
+		if ( is_active_sidebar( $index ) ) {
+			$show = true;
+		}
+	}
+
+	return $show;
+
+}
+
 function blognova_has_social_links() {
 
 	$display_social_links = false;

@@ -18,14 +18,16 @@ $copyright = blognova_theme_mod( 'copyright_text' );
 	<div class="row">
 		<div class="col">
 			<div class="site-footer__bottom flex">
-				<div class="copyright"><?php echo wp_kses_post( $copyright ); ?></div>
-				  Copyright &copy; 2021, All rights reserved
 				<?php
+				if ( $copyright ) {
+					?>
+					<div class="copyright"><?php echo wp_kses_post( $copyright ); ?></div>
+					<?php
+				}
 
 				if ( blognova_theme_mod( 'enable_footer_social_links' ) ) {
 					get_template_part( 'template-parts/social-media' );
 				}
-
 				?>
 			</div>
 		</div>
