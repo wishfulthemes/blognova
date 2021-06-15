@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $blognova_footer_classes   = array();
 $blognova_footer_classes[] = 'site-footer';
-$blognova_footer_classes[] = blognova_theme_mod( 'enable_footer_widgets' ) ? 'has-footer-widgets' : 'no-footer-widgets';
+$blognova_footer_classes[] = blognova_has_footer_widgets() ? 'has-footer-widgets' : 'no-footer-widgets';
 $blognova_footer_classes[] = blognova_has_social_links() && blognova_theme_mod( 'enable_footer_social_links' ) ? 'has-social-links' : 'no-social-links';
 
 ?>

@@ -45,7 +45,7 @@ if ( ! function_exists( 'blognova_register_widget_areas' ) ) {
 				'id'            => 'blognova-footer-widget',
 				'name'          => esc_html__( 'Footer Widget', 'blognova' ) . esc_html( ' %d' ),
 				'description'   => $description,
-				'before_widget' => '<div id="%1$s" class="%2$s">',
+				'before_widget' => '<div id="%1$s" class="col-md-4 %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<div class="widget-title"><h2 class="title">',
 				'after_title'   => '</h2></div>',
