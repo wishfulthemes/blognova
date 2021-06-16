@@ -33,14 +33,17 @@
     &__left {
       width: 250px;
       @media (max-width: 992px) {
-        width: 100px;
-        flex-grow: 1;
+        width: 100%;
       }
       @media (max-width: 576px) {
         max-width: 67%;
       }
       a {
-        width: 100%;
+        width: 250px;
+        display: block;
+        @media (max-width: 570px) {
+          width: 160px;
+        }
         &:focus,
         &:focus-visible {
           img {
@@ -48,7 +51,7 @@
           }
         }
         img {
-          width: 100%;
+          max-width: 100%;
           height: auto;
           max-height: 100px;
         }
@@ -73,7 +76,7 @@
     .site-header__wrap {
       padding: 0.5rem 0;
       .site-logo {
-        //transform: scale(0.8);    
+        //transform: scale(0.8);
       }
     }
   }

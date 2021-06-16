@@ -62,7 +62,23 @@
       }
     }
   })
-
+  //claculate the height of the header
+  var headerHeight = $(".site-header").innerHeight()
+  console.log("height of the header", headerHeight)
+  function adjustNavHeight() {
+    if ($(window).width() < 992) {
+      console.log("window width is now 992px")
+      $("#site-navigation").css({ height: `calc(100% - ${headerHeight}px)`, top: `${headerHeight}px` })
+    }
+  }
+  adjustNavHeight()
+  // $(window).on("resize", function () {
+  //   console.log("window rezied")
+  //   if ($(window).width() < 992) {
+  //     console.log("window width is now 992px")
+  //     $("#site-navigation").css({ height: `calc(100% - ${headerHeight}px)`, top: `${headerHeight}px` })
+  //   }
+  // })
   //toggle menu
   $(".menu-toggle").on("click", function () {
     $("#site-navigation").toggleClass("show")
