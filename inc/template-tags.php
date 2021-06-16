@@ -120,33 +120,33 @@ function blognova_get_post_navigation() {
 
 	<div class="prev-next-wrap flex">
 
-		<?php if ( $prev_post && $current_id !== $prev_post->ID ) { ?>
-			<div class="post-wrap prev-post">
+		<div class="post-wrap prev-post">
+			<?php if ( $prev_post && $current_id !== $prev_post->ID ) { ?>
 				<a href="<?php echo esc_url( get_the_permalink( $prev_post ) ); ?>">
 					<div class="post-img-wrap loading-bg">
-						<img src="<?php echo esc_url( get_the_post_thumbnail( $prev_post ) ); ?>">
+						<img src="<?php echo esc_url( get_the_post_thumbnail_url( $prev_post ) ); ?>">
 					</div>
 					<div class="content-box">
 						<div class="content-top"><?php esc_html_e( 'Older post', 'blognova' ); ?></div>
 						<h4 class="title"><span><?php echo esc_html( get_the_title( $prev_post ) ); ?></span></h4>
 					</div>
 				</a>
-			</div>
-		<?php } ?>
+			<?php } ?>
+		</div>
 
-		<?php if ( $next_post && $current_id !== $next_post->ID ) { ?>
-			<div class="post-wrap next-post">
+		<div class="post-wrap next-post">
+			<?php if ( $next_post && $current_id !== $next_post->ID ) { ?>
 				<a href="<?php echo esc_url( get_the_permalink( $next_post ) ); ?>">
 					<div class="post-img-wrap loading-bg">
-						<img src="<?php echo esc_url( get_the_post_thumbnail( $next_post ) ); ?>">
+						<img src="<?php echo esc_url( get_the_post_thumbnail_url( $next_post ) ); ?>">
 					</div>
 					<div class="content-box">
 						<div class="content-top"><?php esc_html_e( 'Newer post', 'blognova' ); ?></div>
 						<h4 class="title"><span><?php echo esc_html( get_the_title( $next_post ) ); ?></span></h4>
 					</div>
 				</a>
-			</div>
-		<?php } ?>
+			<?php } ?>
+		</div>
 
 	</div>
 
