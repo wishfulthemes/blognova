@@ -258,9 +258,19 @@
       align-items: center;
       padding: 3rem 4rem;
       color: var(--alternate-text-normal);
+      @media (max-width: 570px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
       &__left,
       &__right {
         flex-basis: 50%;
+      }
+      &__left {
+        @media (max-width: 767px) {
+          text-align: center;
+        }
+        margin-bottom: 20px;
       }
       h2 {
         color: var(--alternate-text-dark);
@@ -275,8 +285,16 @@
       .subscribe-form {
         &__field {
           flex-wrap: nowrap;
+          @media (max-width: 570px) {
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+          }
           input {
             @include border-radius(3px 0 0 3px);
+            @media (max-width: 570px) {
+              width: 100%;
+              margin-bottom: 20px;
+            }
           }
           .btn--sub {
             @include border-radius(0 3px 3px 0);
@@ -624,4 +642,38 @@ input {
 
 .archive-content-wrapper {
   display: flex;
+}
+
+//form
+.comment-form {
+  &-comment {
+    label {
+      margin-bottom: 15px;
+    }
+    textarea {
+      border-color: var(--border-color);
+    }
+  }
+  &-author,
+  &-email,
+  &-url {
+    width: 418px;
+    max-width: 100%;
+  }
+  &-cookies-consent {
+    display: flex;
+    align-items: center;
+
+    input {
+      width: 20px;
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.form-submit {
+  input {
+    width: auto;
+  }
 }
