@@ -13072,6 +13072,15 @@ button.menu-toggle {
   color: var(--theme-color);
 }
 
+.site-footer .widget-title h2 {
+  font-size: 24px;
+}
+
+.site-footer a {
+  font-size: 14px;
+  color: var(--text-color-dark);
+}
+
 .btn {
   display: inline-block;
   white-space: nowrap;
@@ -14188,6 +14197,10 @@ input {
 
 .form-submit input {
   width: auto;
+}
+
+.u-post-content ul {
+  list-style-type: disc;
 }
 
 /* Large devices (desktops, 992px and up)*/

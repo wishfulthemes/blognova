@@ -82,4 +82,13 @@
       }
     }
   }
+  .widget-title {
+    h2 {
+      font-size: 24px;
+    }
+  }
+  a {
+    font-size: 14px;
+    color: var(--text-color-dark);
+  }
 }

@@ -15,6 +15,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php
 	blognova_post_box_meta();
 	blognova_post_box_bottom( false, 'post__cnt-box__bottom flex mb-5' );
-	the_content();
+	?>
+	<div class="u-post-content">
+	<?php		the_content(); ?>
+	</div>
+	<?php
 	?>
 </div>
