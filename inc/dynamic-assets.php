@@ -27,7 +27,7 @@ function blognova_dynamic_styles() {
 	</style>
 	<?php
 	$data = ob_get_clean();
-	$data = str_replace( array( '<style>', '</style>' ), null, $data );
+	$data = str_replace( array( '<style>', '</style>' ), '', $data );
 
 	wp_add_inline_style( BLOGNOVA_TEXTDOMAIN, $data );
 }
@@ -64,6 +64,6 @@ function blognova_dynamic_scripts() {
 	</script>
 	<?php
 	$data = ob_get_clean();
-	$data = str_replace( array( '<script>', '</script>' ), null, $data );
+	$data = str_replace( array( '<script>', '</script>' ), '', $data );
 	wp_add_inline_script( BLOGNOVA_TEXTDOMAIN, $data );
 }

@@ -12156,7 +12156,7 @@ input:focus {
 }
 
 .site-header .site-title {
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .site-header .site-title,

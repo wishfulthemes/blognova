@@ -116,32 +116,35 @@ function blognova_get_post_navigation() {
 	$next_post = get_next_post();
 	$prev_post = get_previous_post();
 
+	$display_next = $next_post && $current_id !== $next_post->ID;
+	$display_prev = $prev_post && $current_id !== $prev_post->ID;
+
 	?>
 
 	<div class="prev-next-wrap flex">
 
-		<div class="post-wrap prev-post">
-			<?php if ( $prev_post && $current_id !== $prev_post->ID ) { ?>
+		<div class="<?php echo $display_prev ? esc_attr( 'post-wrap' ) : ''; ?> prev-post">
+			<?php if ( $display_prev ) { ?>
 				<a href="<?php echo esc_url( get_the_permalink( $prev_post ) ); ?>">
 					<div class="post-img-wrap loading-bg">
 						<img src="<?php echo esc_url( get_the_post_thumbnail_url( $prev_post ) ); ?>">
 					</div>
 					<div class="content-box">
-						<div class="content-top"><?php esc_html_e( 'Older post', 'blognova' ); ?></div>
+						<div class="content-top"><?php esc_html_e( 'Previous post', 'blognova' ); ?></div>
 						<h4 class="title"><span><?php echo esc_html( get_the_title( $prev_post ) ); ?></span></h4>
 					</div>
 				</a>
 			<?php } ?>
 		</div>
 
-		<div class="post-wrap next-post">
-			<?php if ( $next_post && $current_id !== $next_post->ID ) { ?>
+		<div class="<?php echo $display_next ? esc_attr( 'post-wrap' ) : ''; ?> next-post">
+			<?php if ( $display_next ) { ?>
 				<a href="<?php echo esc_url( get_the_permalink( $next_post ) ); ?>">
 					<div class="post-img-wrap loading-bg">
 						<img src="<?php echo esc_url( get_the_post_thumbnail_url( $next_post ) ); ?>">
 					</div>
 					<div class="content-box">
-						<div class="content-top"><?php esc_html_e( 'Newer post', 'blognova' ); ?></div>
+						<div class="content-top"><?php esc_html_e( 'Next post', 'blognova' ); ?></div>
 						<h4 class="title"><span><?php echo esc_html( get_the_title( $next_post ) ); ?></span></h4>
 					</div>
 				</a>

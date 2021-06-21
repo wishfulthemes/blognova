@@ -94,7 +94,7 @@ if ( ! function_exists( 'blognova_theme_setup' ) ) {
 			'custom-header',
 			array(
 				'default-image'      => '',
-				'default-text-color' => '000000',
+				'default-text-color' => '03A9F4',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-width'         => true,
@@ -167,14 +167,17 @@ if ( ! function_exists( 'blognova_header_style_callback' ) ) {
 			?>
 			.site-title,
 			.site-description {
-				position: absolute;
-				}
+				display: none;
+			}
 			<?php
 			// If the user has set a custom color for the text use that.
 		else :
 			?>
-			.site-title a,
+			.site-title,
 			.site-description {
+				display: inline-block;
+			}
+			.site-header__wrap__left .site-logo {
 				color: <?php echo esc_attr( "#{$header_text_color}" ); ?> !important;
 			}
 		<?php endif; ?>
