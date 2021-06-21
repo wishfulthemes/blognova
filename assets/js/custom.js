@@ -71,7 +71,11 @@
       $("#site-navigation").css({ height: `calc(100% - ${headerHeight}px)`, top: `${headerHeight}px` })
     }
   }
-  adjustNavHeight()
+  if($(window).width() < 992){
+    adjustNavHeight()
+    console.log('adjust header height function ran')
+  }
+
   // $(window).on("resize", function () {
   //   console.log("window rezied")
   //   if ($(window).width() < 992) {

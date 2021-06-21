@@ -14,6 +14,7 @@
 .site-header {
   background-color: var(--body-bg);
   transition: left var(--transition-speed);
+
   .site-title {
     display: inline-block;
   }
@@ -174,9 +175,9 @@
       }
       form {
         position: absolute;
-        top: 90px;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
         .search-input {
           font-size: 16px;
           transition: width 0.3s ease;
