@@ -24,7 +24,7 @@ if ( ! blognova_has_footer_widgets() ) {
 			$index = $i ? "blognova-footer-widget-{$i}" : 'blognova-footer-widget';
 			if ( is_active_sidebar( $index ) ) {
 				?>
-				<div class="col-md-4">
+				<div class="col-md-3">
 					<?php dynamic_sidebar( $index ); ?>
 				</div>
 				<?php
