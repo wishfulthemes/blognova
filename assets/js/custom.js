@@ -8,6 +8,14 @@
     $(this).siblings(".sub-menu").toggleClass("show")
     // console.log("this function works")
   })
+  //on hover
+  if ($(window).width() > 992) {
+    $(".menu-item-has-children .submenu-icon").on("mouseenter", function () {
+      $(this).siblings(".sub-menu").toggleClass("show")
+      // console.log("this function works")
+    })
+  }
+
   //hide submenu on click outside it's container
   const $menu = $(".sub-menu")
 
@@ -20,6 +28,8 @@
       $menu.removeClass("show")
     }
   })
+  //hide submenu on hover outside it's container
+
   // //show submenu on enter keypress
   $(".menu-item-has-children .submenu-icon").on("keypress", function (e) {
     var keycode = e.keyCode ? e.keyCode : e.which
@@ -64,16 +74,16 @@
   })
   //claculate the height of the header
   var headerHeight = $(".site-header").innerHeight()
-  console.log("height of the header", headerHeight)
+  //console.log("height of the header", headerHeight)
   function adjustNavHeight() {
     if ($(window).width() < 992) {
       console.log("window width is now 992px")
       $("#site-navigation").css({ height: `calc(100% - ${headerHeight}px)`, top: `${headerHeight}px` })
     }
   }
-  if($(window).width() < 992){
+  if ($(window).width() < 992) {
     adjustNavHeight()
-    console.log('adjust header height function ran')
+    console.log("adjust header height function ran")
   }
 
   // $(window).on("resize", function () {
@@ -89,4 +99,7 @@
     $("body").toggleClass("menu-opened")
     $(".menu-toggle").toggleClass("show")
   })
+
+  //show menu on hover
+  $(".")
 })(jQuery)
