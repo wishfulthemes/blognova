@@ -12,6 +12,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $copyright = blognova_theme_mod( 'copyright_text' );
 
+if ( ! $copyright ) {
+	$defaults  = blognova_customizer_defaults();
+	$copyright = ! empty( $defaults['copyright_text'] ) ? $defaults['copyright_text'] : '';
+}
+
 ?>
 
 <div class="container">
